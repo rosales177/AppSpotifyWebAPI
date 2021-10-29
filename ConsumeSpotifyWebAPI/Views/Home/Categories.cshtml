@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ConsumeSpotifyWebAPI.Models.ModelCategories.ResultCategories>
+@{
+    ViewData["Title"] = "Pagina Prueba";
+}
+
+
+<h1>Hola, esta es pagina de prueba</h1>
+@if (Model.Count() > 0)
+{
+    <lu>
+        @foreach (var item in Model)
+        {
+
+            <li>@Html.DisplayFor(imodel => item.name)</li>
+            <img src="@Html.DisplayFor(imodel => item.url)" width="104" height="104"/>
+
+        }
+    </lu>
+}
+else 
+{ 
+    <p>No data</p>
+}
